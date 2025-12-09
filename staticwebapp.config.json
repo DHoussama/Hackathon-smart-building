@@ -1,6 +1,30 @@
 {
   "routes": [
     {
+      "route": "/assets/*.js",
+      "headers": {
+        "content-type": "text/javascript; charset=utf-8"
+      }
+    },
+    {
+      "route": "/assets/*.mjs",
+      "headers": {
+        "content-type": "text/javascript; charset=utf-8"
+      }
+    },
+    {
+      "route": "/assets/*.css",
+      "headers": {
+        "content-type": "text/css; charset=utf-8"
+      }
+    },
+    {
+      "route": "/*.js",
+      "headers": {
+        "content-type": "text/javascript; charset=utf-8"
+      }
+    },
+    {
       "route": "/*",
       "headers": {
         "content-security-policy": "default-src 'self' 'unsafe-inline' 'unsafe-eval' https: data: blob:"
@@ -9,7 +33,7 @@
   ],
   "navigationFallback": {
     "rewrite": "/index.html",
-    "exclude": ["/assets/*", "*.js", "*.css", "*.json", "*.png", "*.jpg", "*.svg"]
+    "exclude": ["/assets/*", "*.js", "*.mjs", "*.css", "*.json", "*.png", "*.jpg", "*.svg", "*.ico"]
   },
   "mimeTypes": {
     ".json": "application/json",
@@ -19,9 +43,10 @@
     ".svg": "image/svg+xml",
     ".png": "image/png",
     ".jpg": "image/jpeg",
-    ".ico": "image/x-icon"
+    ".ico": "image/x-icon",
+    ".wasm": "application/wasm"
   },
-  "platform": {
-    "apiRuntime": "node:18"
+  "globalHeaders": {
+    "X-Content-Type-Options": "nosniff"
   }
 }
