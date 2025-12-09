@@ -2,7 +2,7 @@
 import { GoogleGenAI, Type } from "@google/genai";
 import { POI } from '../types';
 
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+const ai = new GoogleGenAI({ apiKey: npm .env.API_KEY });
 
 // Mock database mapping for AI context
 // This must match the IDs in App.tsx

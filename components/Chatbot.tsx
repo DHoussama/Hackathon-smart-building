@@ -1,7 +1,7 @@
 
 import React, { useState, useRef, useEffect } from 'react';
 import { Send, Bot, User, Loader2 } from 'lucide-react';
-import { getChatResponse } from '../services/geminiService';
+import { getChatResponse } from '../services/azureOpenAIService';
 import { ChatMessage } from '../types';
 
 const Chatbot: React.FC = () => {

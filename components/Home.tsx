@@ -2,7 +2,7 @@
 import React, { useState, useMemo } from 'react';
 import { Search, MapPin, Activity, Coffee, Info, Truck, Mic, Loader2, Bath, ChevronRight, Sparkles, ShoppingBag, CreditCard } from 'lucide-react';
 import { POI } from '../types';
-import { interpretSearchQuery } from '../services/geminiService';
+import { interpretSearchQuery } from '../services/azureOpenAIService';
 
 interface HomeProps {
   onNavigate: (poi: POI) => void;
