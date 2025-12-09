@@ -45,10 +45,6 @@ jobs:
           output_location: "dist" # Built app content directory - Vite outputs to dist
           github_id_token: ${{ steps.idtoken.outputs.result }}
           ###### End of Repository/Build Configurations ######
-        env:
-          VITE_AZURE_OPENAI_API_KEY: ${{ secrets.VITE_AZURE_OPENAI_API_KEY }}
-          VITE_AZURE_OPENAI_ENDPOINT: ${{ secrets.VITE_AZURE_OPENAI_ENDPOINT }}
-          VITE_AZURE_OPENAI_DEPLOYMENT_NAME: ${{ secrets.VITE_AZURE_OPENAI_DEPLOYMENT_NAME }}
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
