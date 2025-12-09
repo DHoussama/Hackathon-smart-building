@@ -1,0 +1,9 @@
+{
+  "name": "USZ Wayfinder",
+  "description": "High-fidelity indoor navigation prototype for University Hospital Zurich featuring AI-powered destination search.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone",
+    "geolocation"
+  ]
+}
